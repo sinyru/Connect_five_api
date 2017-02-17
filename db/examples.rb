@@ -17,3 +17,11 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+Question.create!(
+  problem: 'Why did the Scientist install the knockers?',
+  correct: 'For the No-Bell',
+  wrongOne: 'For people to knock on door',
+  wrongTwo: 'Looks good on the door',
+  wrongThree: 'He likes it'
+)
