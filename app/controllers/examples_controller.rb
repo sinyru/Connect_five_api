@@ -42,7 +42,6 @@ class ExamplesController < OpenReadController
   # DELETE /examples/1.json
   def destroy
     @example.destroy
-
     head :no_content
   end
 
