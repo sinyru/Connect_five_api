@@ -2,9 +2,8 @@
 class CreateGames < ActiveRecord::Migration[5.0]
   def change
     create_table :games do |t|
-      t.string :board, array: true, default: Array.new(9, ''), null: false
-      t.string :playerOne, null: false
-      t.string :playerTwo, null: false
+      t.boolean :playerOneWon, null: false
+      t.boolean :playerTwoWon, null: false
       t.boolean :over, null: false
 
       t.timestamps
