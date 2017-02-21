@@ -19,9 +19,9 @@
 # end
 
 Question.create!(
-  problem: 'Why did the Scientist install the knockers?',
-  correct: 'For the No-Bell',
-  wrongOne: 'For people to knock on door',
-  wrongTwo: 'Looks good on the door',
-  wrongThree: 'He likes it'
+  problem: 'What would you have if you had five mango and two bananas in one hand and two mango and four bananas in the other hand?',
+  correct: 'Very large hands',
+  wrongOne: 'mangos and bananas',
+  wrongTwo: 'handful of fruits',
+  wrongThree: 'Nothing'
 )
