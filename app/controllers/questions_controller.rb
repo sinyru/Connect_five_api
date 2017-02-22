@@ -20,8 +20,11 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    @question.update(question_params)
-    head :no_content
+    if @question.update(question_params)
+      head :no_content
+    else
+      render json: @question.errors, status: :unprocessable_entity
+    end
   end
 
   def destroy
