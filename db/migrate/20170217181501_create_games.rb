@@ -2,9 +2,9 @@
 class CreateGames < ActiveRecord::Migration[5.0]
   def change
     create_table :games do |t|
-      t.boolean :playerOneWon, null: false
-      t.boolean :playerTwoWon, null: false
-      t.boolean :over, null: false
+      t.boolean :playerOneWon, default: false, null: false
+      t.boolean :playerTwoWon, default: false, null: false
+      t.boolean :over, default: false, null: false
 
       t.timestamps
     end
