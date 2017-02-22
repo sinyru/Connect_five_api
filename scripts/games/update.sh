@@ -9,9 +9,9 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
     "game": {
-      "playerOneWon": "yes",
-      "playerTwoWon": "no",
-      "over": "yes"
+      "playerOneWon": true,
+      "playerTwoWon": false,
+      "over": true
     }
   }'
 
