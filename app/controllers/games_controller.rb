@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class GamesController < ApplicationController
+class GamesController < OpenReadController
   before_action :set_game, only: [:show, :update, :destroy]
 
   def index
@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new(game_params)
+    @game = current_user.games.build(game_params)
     if @game.save
       render json: @game, status: :created
     else
@@ -30,7 +30,7 @@ class GamesController < ApplicationController
   end
 
   def set_game
-    @game = Game.find(params[:id])
+    @game = current_user.games.find(params[:id])
   end
   private :set_game
 
