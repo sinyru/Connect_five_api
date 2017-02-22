@@ -30,11 +30,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:problem,
-                                     :correct,
-                                     :wrongOne,
-                                     :wrongTwo,
-                                     :wrongThree)
+    params.require(:question).permit(:correct)
   end
   private :question_params
 
