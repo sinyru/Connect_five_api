@@ -1,0 +1,1 @@
+\copy questions(problem, correct, wrongOne, wrongTwo, wrongThree) FROM 'data/questions.csv' WITH (FORMAT csv, HEADER true)
