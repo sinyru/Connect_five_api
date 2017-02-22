@@ -6,11 +6,12 @@ curl "${API}${URL_PATH}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
+  --header "Authorization: Token token=$TOKEN" \
   --data '{
     "game": {
-      "playerOneWon": true,
-      "playerTwoWon": false,
-      "over": true
+      "playerOneWon": "yes",
+      "playerTwoWon": "no",
+      "over": "yes"
     }
   }'
 

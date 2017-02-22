@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20170217193538) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.boolean  "playerOneWon", default: false, null: false
-    t.boolean  "playerTwoWon", default: false, null: false
-    t.boolean  "over",         default: false, null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "playerOneWon", default: "no", null: false
+    t.string   "playerTwoWon", default: "no", null: false
+    t.string   "over",         default: "no", null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "user_id"
     t.index ["user_id"], name: "index_games_on_user_id", using: :btree
   end

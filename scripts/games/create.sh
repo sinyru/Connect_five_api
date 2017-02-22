@@ -7,12 +7,6 @@ curl "${API}${URL_PATH}" \
   --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=$TOKEN" \
-  --data '{
-    "game": {
-      "playerOneWon": false,
-      "playerTwoWon": false,
-      "over": true
-    }
-  }'
+
 
 echo
