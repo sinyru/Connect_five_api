@@ -2,7 +2,7 @@
 
 # [`Quiz Board Game Link`](https://sinyru.github.io/Quiz_Board_Browser/)
 # [`Front End Link`](https://github.com/sinyru/Quiz_Board_Browser)
-# [`Entity Relationship Diagram`](http://imgur.com/a/5PETj)
+# [`Entity Relationship Diagram Link`](http://imgur.com/a/5PETj)
 
 ## What is this API for?
 
