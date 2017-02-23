@@ -20,11 +20,8 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    if @question.update(question_params)
-      head :no_content
-    else
-      render json: @question.errors, status: :unprocessable_entity
-    end
+    @question.update(question_params)
+    head :no_content
   end
 
   def destroy
@@ -33,7 +30,11 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:correct)
+    params.require(:question).permit(:problem,
+                                     :correct,
+                                     :wrongOne,
+                                     :wrongTwo,
+                                     :wrongThree)
   end
   private :question_params
 
