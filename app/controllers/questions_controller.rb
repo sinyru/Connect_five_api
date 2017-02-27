@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class QuestionsController < ApplicationController
+class QuestionsController < OpenReadController
   before_action :set_question, only: [:show, :update, :destroy]
 
   def index
@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
+    @question = current_user.questions.build(question_params)
     if @question.save
       render json: @question, status: :created
     else
@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
   private :question_params
 
   def set_question
-    @question = Question.find(params[:id])
+    @question = current_user.questions.find(params[:id])
   end
   private :set_question
 end
